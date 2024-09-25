@@ -94,7 +94,22 @@ void deleteS()
 }
 void deleteE()
 {
-
+    struct node *h1,*a1;
+    if(start==0)
+    {
+        printf("There is no any node to delete.");
+    }
+    else
+    {
+        h1=start;
+        while(h1->next->next!=start)
+        {
+            h1=h1->next;
+        }
+        a1=h1->next;
+        h1->next=start;
+        free(a1);
+    }
 }
 void deleteM()
 {
